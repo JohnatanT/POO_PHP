@@ -2,14 +2,14 @@
 //Craindo a classe Caneta
 class Caneta{
     //Atributos da classe Caneta
-    var $modelo;
-    var $cor;
-    var $ponta;
-    var $carga;
-    var $tampada;
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    protected $tampada;
     
     //Métodos da classe Caneta
-    function rabiscar(){
+    public function rabiscar(){
         //Atributo dentro de um método que esta na propria classe $this(Será subistituido pelo nome do objeto)
         if ($this->tampada == true) {
             echo "Não posso rabiscar</br>";
@@ -20,11 +20,11 @@ class Caneta{
         }
     
     //Métodos estão modificando um atributo
-    function tampar(){
+    public function tampar(){
             $this->tampada = true;
         }
     
-    function destampar(){
+    public function destampar(){
               $this->tampada = false;
         }   
 
