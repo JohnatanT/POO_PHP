@@ -6,19 +6,20 @@
     </head>
     <body>
         <?php
-         //Carregando arquivo Caneta.php   
+       //Carregando minha classe
         require_once 'Caneta.php';
         
         //Instanciando meu objeto
-        //Nome do Objeto = new Nome da Classe
-        $c1 = new Caneta;
+        $c1 = new Caneta();
         
-       $c1->modelo = "Bic Cristal";
-       $c1->cor = "Azul";
-       
-     
-       $c1->tampar();
-       $c1->rabiscar();
+        //Colocando valores atraves do meu metodo set
+        $c1->setModelo("Bic");
+        $c1->setPonta(0.5);
+        $c1->setCor("Azul");
+        
+        //Chamando os valores pelo meu atributo get
+        echo "Eu tenho uma caneta do tipo {$c1->getModelo()} com a ponta {$c1->getPonta()} e cor {$c1->getCor()}";
+        
         
         ?>
     </body>

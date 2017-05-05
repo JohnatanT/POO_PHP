@@ -1,32 +1,36 @@
 <?php
 //Craindo a classe Caneta
 class Caneta{
-    //Atributos da classe Caneta
+    
+    //Criando meus atributos
     public $modelo;
-    public $cor;
     private $ponta;
-    protected $carga;
-    protected $tampada;
+    private $cor;
     
-    //Métodos da classe Caneta
-    public function rabiscar(){
-        //Atributo dentro de um método que esta na propria classe $this(Será subistituido pelo nome do objeto)
-        if ($this->tampada == true) {
-            echo "Não posso rabiscar</br>";
-        }else{
-            echo "Estou rabiscando</br>";        
-             }
+   
     
-        }
     
-    //Métodos estão modificando um atributo
-    public function tampar(){
-            $this->tampada = true;
-        }
+    //Criando meus metodos acessores(get) e modificadores(set)
+    public function getModelo(){
+        return $this->modelo;
+    }
+    public function setModelo($m){
+        $this->modelo = $m;
+    }
     
-    public function destampar(){
-              $this->tampada = false;
-        }   
-
+    public function getPonta(){
+        return $this->ponta;
+    }
+    public function setPonta($p){
+        $this->ponta = $p;
+    }
+    
+    public function setCor($c){
+        $this->cor = $c;
+    }
+    public function getCor(){
+        return $this->cor;
+    }
+    
     
     }
