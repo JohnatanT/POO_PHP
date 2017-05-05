@@ -7,7 +7,12 @@ class Caneta{
     private $ponta;
     private $cor;
     
-   
+    //Criando um construtor
+    public function __construct($m,$p,$c){
+        $this->modelo = $m;
+        $this->ponta = $p;
+        $this->cor = $c;
+    }
     
     
     //Criando meus metodos acessores(get) e modificadores(set)
