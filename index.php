@@ -2,17 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Aula02</title>
+        <title>Aula06</title>
     </head>
     <body>
+        <h1>Projeto Controle Remoto</h1>   
         <?php
-       //Carregando minha classe
-        require_once 'Caneta.php';
-        
-        //Instanciando meu objeto com os valores do construtor
-        $c1 = new Caneta("BIC","0.5","Azul");
-        
-        
+            require_once 'ControleRemoto.php';
+            $c = new ControleRemoto();
+            $c->ligar();
+            $c->maisVolume();
+            $c->abrirMenu();
+               
+            
+            
         ?>
+         
     </body>
 </html>
